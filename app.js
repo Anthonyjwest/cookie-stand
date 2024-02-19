@@ -45,10 +45,10 @@ function randomcustomers(min, max){
 
 let div = document.getElementById('storeinfos');
 
-Cities.prototype.storeinfos = function() {
+function header() {
 
     let article = document.createElement('article');
-   div.appendChild(article);
+    div.appendChild(article);
     
     let table = document.createElement('table');
     article.appendChild(table);
@@ -70,7 +70,6 @@ Cities.prototype.storeinfos = function() {
     let loctot = document.createElement('th');
     headerRow.appendChild(loctot);
     loctot.textContent = "Location Totals";
-
 
     let seattlerow = document.createElement('tr');
     table.appendChild(seattlerow);
@@ -315,5 +314,5 @@ endtot.textContent = alltotals;
 
 }
 
-seattle.storeinfos();
+header();
 
