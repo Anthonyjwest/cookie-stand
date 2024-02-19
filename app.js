@@ -2,7 +2,7 @@
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-function Cities(name, minCustomers, maxCustomers, avg, sales){
+function Cities(name, minCustomers, maxCustomers, avg){
     this.name = name;
     this.minCustomers = minCustomers;
     this.maxCustomers = maxCustomers;
@@ -20,8 +20,6 @@ let tokyo = new Cities('Tokyo', 3, 12, 1.2, []);
 let dubai = new Cities('Dubai', 11, 38, 3.7, []);
 let paris = new Cities('Paris', 20, 38, 2.3, []);
 let lima = new Cities('Lima', 2, 16, 4.6, []);
-
-//let cities = new Cities(this.name, this.minCustomers, this.maxCustomers, this.avg, this.sales);
 
 seattle.numcookies();
 tokyo.numcookies();
@@ -150,6 +148,17 @@ let tarray = tokyo.sales;
     dubcookies.textContent = total;
 }
 
+let darray = dubai.sales;
+
+   function sumcookies(darray){
+        let x = darray[0] + darray[1] + darray[2] + darray[3] + darray[4] + darray[5] + darray[6] + darray[7] + darray[8] + darray[9] + darray[10] + darray[11] + darray[12] + darray[13];
+        return x;
+    }
+    let dubtotal = sumcookies(darray);
+    let dubend = document.createElement('td');
+    dubairow.appendChild(dubend);
+    dubend.textContent = dubtotal;
+
 let parisrow = document.createElement('tr');
 table.appendChild(parisrow);
 
@@ -167,6 +176,17 @@ pariscookies += parissale;
 let total = `${parissale}`;
 parcookies.textContent = total;
 }
+
+let parray = paris.sales;
+
+   function sumcookies(parray){
+        let x = parray[0] + parray[1] + parray[2] + parray[3] + parray[4] + parray[5] + parray[6] + parray[7] + parray[8] + parray[9] + parray[10] + parray[11] + parray[12] + parray[13];
+        return x;
+    }
+    let partotal = sumcookies(parray);
+    let parend = document.createElement('td');
+    parisrow.appendChild(parend);
+    parend.textContent = partotal;
 
 let limarow = document.createElement('tr');
 table.appendChild(limarow);
@@ -186,18 +206,114 @@ let total = `${limasale}`;
 limcookies.textContent = total;
 }
 
+let larray = lima.sales;
+
+   function sumcookies(larray){
+        let x = larray[0] + larray[1] + larray[2] + larray[3] + larray[4] + larray[5] + larray[6] + larray[7] + larray[8] + larray[9] + larray[10] + larray[11] + larray[12] + larray[13];
+        return x;
+    }
+    let limtotal = sumcookies(larray);
+    let limend = document.createElement('td');
+    limarow.appendChild(limend);
+    limend.textContent = limtotal;
+
 let totalrow = document.createElement('tr');
 table.appendChild(totalrow);
 
-let totalcell = document.createElement('td');
+let totalcell = document.createElement('th');
 totalrow.appendChild(totalcell);
-totalcell.textContent = 'Total';
+totalcell.textContent = 'Hourly Totals for all stores';
 
+let sixam = seattle.sales[0] + tokyo.sales[0] + dubai.sales[0] + paris.sales[0] + lima.sales[0];
+
+let sixtot = document.createElement('th');
+totalrow.appendChild(sixtot);
+sixtot.textContent = sixam;
+
+let sevenam = seattle.sales[1] + tokyo.sales[1] + dubai.sales[1] + paris.sales[1] + lima.sales[1];
+
+let seventot = document.createElement('th');
+totalrow.appendChild(seventot);
+seventot.textContent = sevenam;
+
+let eightam = seattle.sales[2] + tokyo.sales[2] + dubai.sales[2] + paris.sales[2] + lima.sales[2];
+
+let eighttot = document.createElement('th');
+totalrow.appendChild(eighttot);
+eighttot.textContent = eightam;
+
+let nineam = seattle.sales[3] + tokyo.sales[3] + dubai.sales[3] + paris.sales[3] + lima.sales[3];
+
+let ninetot = document.createElement('th');
+totalrow.appendChild(ninetot);
+ninetot.textContent = nineam;
+
+let tenam = seattle.sales[4] + tokyo.sales[4] + dubai.sales[4] + paris.sales[4] + lima.sales[4];
+
+let tentot = document.createElement('th');
+totalrow.appendChild(tentot);
+tentot.textContent = tenam;
+
+let elevenam = seattle.sales[5] + tokyo.sales[5] + dubai.sales[5] + paris.sales[5] + lima.sales[5];
+
+let eleventot = document.createElement('th');
+totalrow.appendChild(eleventot);
+eleventot.textContent = elevenam;
+
+let twelveam = seattle.sales[6] + tokyo.sales[6] + dubai.sales[6] + paris.sales[6] + lima.sales[6];
+
+let twelvetot = document.createElement('th');
+totalrow.appendChild(twelvetot);
+twelvetot.textContent = twelveam;
+
+let onepm = seattle.sales[7] + tokyo.sales[7] + dubai.sales[7] + paris.sales[7] + lima.sales[7];
+
+let onetot = document.createElement('th');
+totalrow.appendChild(onetot);
+onetot.textContent = onepm;
+
+let twopm = seattle.sales[8] + tokyo.sales[8] + dubai.sales[8] + paris.sales[8] + lima.sales[8];
+
+let twotot = document.createElement('th');
+totalrow.appendChild(twotot);
+twotot.textContent = twopm;
+
+let threepm = seattle.sales[9] + tokyo.sales[9] + dubai.sales[9] + paris.sales[9] + lima.sales[9];
+
+let threetot = document.createElement('th');
+totalrow.appendChild(threetot);
+threetot.textContent = threepm;
+
+let fourpm = seattle.sales[10] + tokyo.sales[10] + dubai.sales[10] + paris.sales[10] + lima.sales[10];
+
+let fourtot = document.createElement('th');
+totalrow.appendChild(fourtot);
+fourtot.textContent = fourpm;
+
+let fivepm = seattle.sales[11] + tokyo.sales[11] + dubai.sales[11] + paris.sales[11] + lima.sales[11];
+
+let fivetot = document.createElement('th');
+totalrow.appendChild(fivetot);
+fivetot.textContent = fivepm;
+
+let sixpm = seattle.sales[12] + tokyo.sales[12] + dubai.sales[12] + paris.sales[12] + lima.sales[12];
+
+let sixxtot = document.createElement('th');
+totalrow.appendChild(sixxtot);
+sixxtot.textContent = sixpm;
+
+let sevennpm = seattle.sales[13] + tokyo.sales[13] + dubai.sales[13] + paris.sales[13] + lima.sales[13];
+
+let sevenntot = document.createElement('th');
+totalrow.appendChild(sevenntot);
+sevenntot.textContent = sevennpm;
+
+let alltotals = sumcookies(sarray) + sumcookies(tarray) + sumcookies(darray) + sumcookies(parray) + sumcookies(larray);
+let endtot = document.createElement('th');
+totalrow.appendChild(endtot);
+endtot.textContent = alltotals;
 
 }
-
-
-
 
 seattle.storeinfos();
 
