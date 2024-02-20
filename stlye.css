@@ -47,3 +47,7 @@ table, tr, td {
     border-color: black;
     padding: 5px;
 }
+
+#storeinfos {
+    display:flex;
+}
